@@ -1,0 +1,70 @@
+
+:root{
+  --pink:#d94f8a;
+  --pink-dark:#bc376f;
+  --pink-soft:#fbeaf2;
+  --ink:#24222a;
+  --muted:#66616a;
+  --white:#fff;
+  --line:#eee4e9;
+  --shadow:0 14px 40px rgba(55,25,43,.10);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.container{width:min(1160px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{min-height:86px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand img{width:205px;height:74px;object-fit:contain;object-position:center}
+.menu{display:flex;gap:30px;align-items:center;font-weight:650}
+.menu a{padding:30px 0;position:relative}
+.menu a:hover,.menu a.active{color:var(--pink)}
+.menu a.active:after{content:"";height:3px;width:100%;background:var(--pink);position:absolute;bottom:18px;left:0;border-radius:99px}
+.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:999px;padding:13px 22px;font-weight:750;cursor:pointer;transition:.2s}
+.btn-primary{background:var(--pink);color:#fff;box-shadow:0 8px 22px rgba(217,79,138,.25)}
+.btn-primary:hover{background:var(--pink-dark);transform:translateY(-1px)}
+.btn-outline{border:2px solid var(--pink);color:var(--pink);background:#fff}
+.btn-outline:hover{background:var(--pink-soft)}
+.hero{min-height:500px;display:grid;grid-template-columns:.9fr 1.4fr;background:linear-gradient(90deg,#fff7fa 0%,#fff 45%)}
+.hero-copy{padding:72px 8% 64px 7%;display:flex;flex-direction:column;justify-content:center}
+.hero h1{font-size:clamp(2.5rem,5vw,4.4rem);line-height:1.03;margin:0 0 22px;letter-spacing:-2px}
+.hero h1 span{color:var(--pink)}
+.hero p{font-size:1.15rem;max-width:560px;color:#4d4850}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:22px}
+.hero-image{min-height:500px;background:url('/images/hero.jpg') center/cover no-repeat}
+.strip{margin:-1px auto 0;position:relative;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);border-radius:18px;padding:22px 28px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.pillar{display:flex;gap:14px;align-items:center;padding:8px 18px;border-right:1px solid var(--line)}
+.pillar:last-child{border:0}.icon{font-size:2rem}.pillar strong{display:block}.pillar span{color:var(--muted);font-size:.9rem}
+.section{padding:80px 0}.soft{background:var(--pink-soft)}
+.section-title{text-align:center;margin-bottom:42px}.section-title h2{font-size:2.4rem;margin:0}.section-title p{color:var(--muted);max-width:700px;margin:10px auto}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+.about h2{font-size:2.4rem;margin:0 0 14px}.about p{color:#59535b}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:25px}
+.check{display:flex;gap:10px;align-items:flex-start}.check b{color:var(--pink)}
+.cred{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:18px;padding:25px;text-align:center}.stat strong{font-size:2rem;color:var(--pink);display:block}.stat span{color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 6px 22px rgba(40,20,30,.06)}
+.card img{width:100%;height:230px;object-fit:cover}.card-body{padding:22px}.tag{display:inline-block;background:var(--pink-soft);color:var(--pink-dark);border-radius:99px;padding:5px 10px;font-size:.78rem;font-weight:750}.card h3{margin:12px 0 7px}.card p{color:var(--muted);margin:0}
+.donation{max-width:900px;margin:auto;text-align:center;background:linear-gradient(135deg,#fff,#fff0f6);border:1px solid #f1d9e4;border-radius:28px;padding:55px}
+.amounts{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:25px 0}.amount{padding:12px 22px;border:1px solid #e8c5d4;background:#fff;border-radius:12px;font-weight:750;color:var(--pink-dark)}
+.form-wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px}.contact-box{background:var(--pink-soft);padding:30px;border-radius:22px}.contact-box p{color:#5e5960}
+form{display:grid;gap:16px}label{font-weight:700}input,textarea{width:100%;border:1px solid #d9cfd5;border-radius:12px;padding:13px 15px;font:inherit;outline:none}input:focus,textarea:focus{border-color:var(--pink);box-shadow:0 0 0 3px rgba(217,79,138,.10)}textarea{min-height:140px;resize:vertical}.field-error{color:#b1265c;font-size:.85rem}
+.alert{padding:14px 18px;border-radius:12px;margin-bottom:20px}.success{background:#eaf8ef;color:#1d6d38}.error{background:#fff0f0;color:#a02020}
+footer{background:#24222a;color:#fff;padding:50px 0 28px}.footer-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:40px}.footer-grid p{color:#ddd}.footer-bottom{border-top:1px solid #444;margin-top:30px;padding-top:20px;color:#bbb;font-size:.9rem}
+.page-hero{padding:75px 0;background:linear-gradient(110deg,#fff5f9,#fff);text-align:center}.page-hero h1{font-size:3rem;margin:0}.page-hero p{color:var(--muted);max-width:700px;margin:10px auto}
+@media(max-width:900px){
+  .menu{gap:14px}.menu a{font-size:.9rem}.brand img{width:175px}
+  .hero{grid-template-columns:1fr}.hero-image{min-height:360px;order:-1}.hero-copy{padding:55px 5%}
+  .strip,.cred{grid-template-columns:1fr 1fr}.pillar:nth-child(2){border:0}
+  .about,.form-wrap{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:650px){
+  .nav{min-height:74px}.brand img{width:145px;height:62px}.menu{gap:10px}.menu a{padding:25px 0;font-size:.76rem}.menu .btn{display:none}
+  .menu a.active:after{bottom:14px}
+  .hero h1{font-size:2.6rem}.strip,.cred,.cards,.checks,.footer-grid{grid-template-columns:1fr}
+  .pillar{border-right:0;border-bottom:1px solid var(--line);padding:12px 0}.pillar:last-child{border:0}
+  .section{padding:60px 0}.donation{padding:35px 20px}
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Instituto Ecoar — educação, esporte, cultura e solidariedade para transformar vidas.">
+<title th:text="${pageTitle != null ? pageTitle + ' | Instituto Ecoar' : 'Instituto Ecoar'}">Instituto Ecoar</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="/"><img src="/images/logo-ecoar.jpg" alt="Instituto Ecoar"></a>
+    <nav class="menu">
+      <a href="/" th:classappend="${active == 'inicio'} ? ' active' : ''">Início</a>
+      <a href="/atividades" th:classappend="${active == 'atividades'} ? ' active' : ''">Atividades</a>
+      <a href="/doacoes" th:classappend="${active == 'doacoes'} ? ' active' : ''">Doações</a>
+      <a href="/contato" th:classappend="${active == 'contato'} ? ' active' : ''">Contato</a>
+      <a class="btn btn-primary" href="/doacoes">Doe agora</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="page-hero"><div class="container"><h1>Atividades</h1><p>Projetos que unem educação, esporte, cultura e participação comunitária para criar oportunidades e transformar vidas.</p></div></section>
+<section class="section">
+<div class="container cards">
+  <article class="card"><img src="/images/educacao.jpg" alt="Crianças em atividade de educação"><div class="card-body"><span class="tag">Educação</span><h3>Leitura e aprendizagem</h3><p>Atividades de apoio escolar, incentivo à leitura e experiências que aproximam crianças do conhecimento.</p></div></article>
+  <article class="card"><img src="/images/esporte.jpg" alt="Atividade esportiva com crianças"><div class="card-body"><span class="tag">Esporte</span><h3>Esporte e integração</h3><p>Práticas esportivas que estimulam disciplina, saúde, amizade, respeito e trabalho em equipe.</p></div></article>
+  <article class="card"><img src="/images/cultura.jpg" alt="Atividade cultural"><div class="card-body"><span class="tag">Cultura</span><h3>Arte e cultura</h3><p>Oficinas e encontros que incentivam criatividade, expressão, convivência e valorização cultural.</p></div></article>
+</div>
+</section>
+<section class="section soft">
+<div class="container">
+<div class="section-title"><h2>Eventos e participação</h2><p>O instituto também promove e participa de eventos que aproximam crianças, adultos, famílias, voluntários e parceiros.</p></div>
+<div class="about">
+  <div><h2>Construindo experiências</h2><p>Em cada evento, buscamos criar um ambiente acolhedor, educativo e inclusivo. Nesta área poderemos publicar futuramente fotos, datas, locais, participantes e resultados de cada ação.</p><a class="btn btn-primary" href="/contato">Quero participar</a></div>
+  <img src="/images/hero.jpg" alt="Participação em evento comunitário" style="border-radius:22px;height:330px;width:100%;object-fit:cover">
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <h3>Instituto Ecoar</h3>
+      <p>Educar, incluir e transformar por meio da educação, cultura, esporte e solidariedade.</p>
+    </div>
+    <div>
+      <h3>Endereço</h3>
+      <p>RUA 05 – Nº SN – CONDOMÍNIO BELLA VISTA<br>
+      BAIRRO: QUILOMBO DOS PALMARES<br>
+      PALMARES – PE – BRASIL<br>CEP: 55.540-000</p>
+    </div>
+    <div>
+      <h3>Contato</h3>
+      <p><strong>E-mail:</strong><br>ecoarinstitutobr@gmail.com</p>
+    </div>
+  </div>
+  <div class="container footer-bottom">© 2026 Instituto Ecoar. Todos os direitos reservados.</div>
+</footer>
+<script src="/js/main.js"></script>
+</body>
+</html>
