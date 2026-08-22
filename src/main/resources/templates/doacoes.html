@@ -3,62 +3,148 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Instituto Ecoar â€” educaÃ§Ã£o, esporte, cultura e solidariedade para transformar vidas.">
-<title th:text="${pageTitle != null ? pageTitle + ' | Instituto Ecoar' : 'Instituto Ecoar'}">Instituto Ecoar</title>
+<meta name="description" content="Instituto Ecoar — educação, esporte, cultura e solidariedade para transformar vidas.">
+<title>Doações | Instituto Ecoar</title>
 <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+
 <header>
   <div class="container nav">
-    <a class="brand" href="/"><img src="/images/logo-ecoar.jpg" alt="Instituto Ecoar"></a>
+    <a class="brand" href="/">
+      <img src="/images/logo-ecoar.jpg" alt="Instituto Ecoar">
+    </a>
+
     <nav class="menu">
-      <a href="/" th:classappend="${active == 'inicio'} ? ' active' : ''">InÃ­cio</a>
-      <a href="/atividades" th:classappend="${active == 'atividades'} ? ' active' : ''">Atividades</a>
-      <a href="/doacoes" th:classappend="${active == 'doacoes'} ? ' active' : ''">DoaÃ§Ãµes</a>
-      <a href="/contato" th:classappend="${active == 'contato'} ? ' active' : ''">Contato</a>
+      <a href="/">Início</a>
+      <a href="/atividades">Atividades</a>
+      <a href="/doacoes" class="active">Doações</a>
+      <a href="/contato">Contato</a>
       <a class="btn btn-primary" href="/doacoes">Doe agora</a>
     </nav>
   </div>
 </header>
 
 <main>
-<section class="page-hero"><div class="container"><h1>DoaÃ§Ãµes</h1><p>Sua contribuiÃ§Ã£o ajuda o Instituto Ecoar a ampliar aÃ§Ãµes de educaÃ§Ã£o, esporte, cultura e solidariedade.</p></div></section>
-<section class="section">
-<div class="container">
-  <div class="donation">
-    <h2>FaÃ§a uma doaÃ§Ã£o</h2>
-    <p>Escolha uma contribuiÃ§Ã£o e ajude a manter projetos que geram oportunidades para crianÃ§as, jovens e adultos.</p>
-    <div class="amounts">
-      <span class="amount">R$ 20</span><span class="amount">R$ 50</span><span class="amount">R$ 100</span><span class="amount">R$ 200</span><span class="amount">Outro valor</span>
-    </div>
-    <p><strong>PIX</strong><br>O campo abaixo serÃ¡ preenchido com a chave PIX oficial do instituto antes da publicaÃ§Ã£o.</p>
-    <div style="background:#fff;border:1px dashed #dba4bd;border-radius:12px;padding:16px;margin:18px 0;color:#777">CHAVE PIX â€” inserir apÃ³s confirmaÃ§Ã£o do Instituto Ecoar</div>
-    <a class="btn btn-primary" th:href="${donationCheckoutUrl}" target="_blank" rel="noopener">Doar com cartÃ£o / checkout</a>
-    <p style="font-size:.85rem;margin-top:18px;color:#777">Pagamento seguro realizado pelo link oficial do Instituto Ecoar na SumUp.</p>
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Doações</h1>
+    <p>
+      Sua contribuição ajuda o Instituto Ecoar a ampliar ações
+      de educação, esporte, cultura e solidariedade.
+    </p>
   </div>
-</div>
 </section>
+
+<section class="section">
+  <div class="container">
+
+    <div class="donation">
+
+      <h2>Apoie o Instituto Ecoar</h2>
+
+      <p>
+        Sua contribuição ajuda a manter nossas ações de educação,
+        esporte, cultura e solidariedade.
+      </p>
+
+      <div class="donation-options">
+
+        <div class="donation-option">
+
+          <div class="donation-icon">♥</div>
+
+          <h3>Doação tradicional</h3>
+
+          <p>
+            Faça sua contribuição por meio do checkout seguro da SumUp.
+          </p>
+
+          <a
+            class="btn btn-primary"
+            href="https://pay.sumup.com/b2c/Q3PGBIAK"
+            target="_blank"
+            rel="noopener noreferrer">
+            Doar com cartão / Pix
+          </a>
+
+        </div>
+
+        <div class="donation-option">
+
+          <div class="donation-icon">₿</div>
+
+          <h3>Doação em criptomoedas</h3>
+
+          <p>
+            Contribua utilizando as criptomoedas disponíveis
+            na página oficial de doação do Instituto Ecoar.
+          </p>
+
+          <a
+            class="btn btn-crypto"
+            href="https://plisio.net/donate/UuNRPMxQ"
+            target="_blank"
+            rel="noopener noreferrer">
+            Doar com criptomoedas
+          </a>
+
+        </div>
+
+      </div>
+
+      <p class="donation-note">
+        Obrigado por fazer parte dessa missão e ajudar o Instituto
+        Ecoar a transformar oportunidades em esperança.
+      </p>
+
+    </div>
+
+  </div>
+</section>
+
 </main>
 
 <footer>
+
   <div class="container footer-grid">
+
     <div>
       <h3>Instituto Ecoar</h3>
-      <p>Educar, incluir e transformar por meio da educaÃ§Ã£o, cultura, esporte e solidariedade.</p>
+      <p>
+        Educar, incluir e transformar por meio da educação,
+        cultura, esporte e solidariedade.
+      </p>
     </div>
+
     <div>
-      <h3>EndereÃ§o</h3>
-      <p>RUA 05 â€“ NÂº SN â€“ CONDOMÃNIO BELLA VISTA<br>
-      BAIRRO: QUILOMBO DOS PALMARES<br>
-      PALMARES â€“ PE â€“ BRASIL<br>CEP: 55.540-000</p>
+      <h3>Endereço</h3>
+      <p>
+        RUA 05 – Nº SN – CONDOMÍNIO BELLA VISTA<br>
+        BAIRRO: QUILOMBO DOS PALMARES<br>
+        PALMARES – PE – BRASIL<br>
+        CEP: 55.540-000
+      </p>
     </div>
+
     <div>
       <h3>Contato</h3>
-      <p><strong>E-mail:</strong><br>ecoarinstitutobr@gmail.com</p>
+      <p>
+        <strong>E-mail:</strong><br>
+        ecoarinstitutobr@gmail.com
+      </p>
     </div>
+
   </div>
-  <div class="container footer-bottom">Â© 2026 Instituto Ecoar. Todos os direitos reservados.</div>
+
+  <div class="container footer-bottom">
+    © 2026 Instituto Ecoar. Todos os direitos reservados.
+  </div>
+
 </footer>
+
 <script src="/js/main.js"></script>
+
 </body>
 </html>
